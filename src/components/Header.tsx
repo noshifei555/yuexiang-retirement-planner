@@ -25,7 +25,9 @@ function NavLink({ href, label }: { href: string; label: string }) {
 
 export default function Header() {
   const { lang, setLang } = useI18n();
-  const { mode, toggleMode } = useMode();
+const { mode, setMode } = useMode();
+
+const toggleMode = () => setMode(mode === "senior" ? "planner" : "senior");
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/80 backdrop-blur">
