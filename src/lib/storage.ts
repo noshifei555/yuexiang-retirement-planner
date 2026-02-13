@@ -1,20 +1,26 @@
-// src/lib/storage.ts
+export function storageGet(key: string): string | null {
+  if (typeof window === "undefined") return null;
+  try {
+    return window.localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+}
 
-/**
- * SSR-safe localStorage wrapper functions
- */
+export function storageSet(key: string, value: string): void {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(key, value);
+  } catch {
+    // ignore
+  }
+}
 
-export const getItem = (key: string): string | null => {
-    if (typeof window === 'undefined') return null;
-    return localStorage.getItem(key);
-};
-
-export const setItem = (key: string, value: string): void => {
-    if (typeof window === 'undefined') return;
-    localStorage.setItem(key, value);
-};
-
-export const removeItem = (key: string): void => {
-    if (typeof window === 'undefined') return;
-    localStorage.removeItem(key);
-};
+export function storageRemove(key: string): void {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.removeItem(key);
+  } catch {
+    // ignore
+  }
+}

@@ -1,24 +1,33 @@
-import React from 'react';
+import React from "react";
 
-const LanguageSwitch = ({ currentLang, onLangChange }) => {
-    const languages = [
-        { code: 'en', label: 'English' },
-        { code: 'zh', label: '中文' }
-    ];
+type Lang = "zh" | "en";
 
-    return (
-        <div>
-            {languages.map(lang => (
-                <button
-                    key={lang.code}
-                    onClick={() => onLangChange(lang.code)}
-                    style={{ fontWeight: currentLang === lang.code ? 'bold' : 'normal' }}
-                >
-                    {lang.label}
-                </button>
-            ))}
-        </div>
-    );
+type Props = {
+  currentLang: Lang;
+  onLangChange: (lang: Lang) => void;
 };
 
-export default LanguageSwitch;
+export default function LanguageSwitch({ currentLang, onLangChange }: Props) {
+  const languages: { code: Lang; label: string }[] = [
+    { code: "zh", label: "中文" },
+    { code: "en", label: "EN" },
+  ];
+
+  return (
+    <div className="flex items-center gap-2">
+      {languages.map((l) => (
+        <button
+          key={l.code}
+          onClick={() => onLangChange(l.code)}
+          className={`rounded-lg px-3 py-1.5 text-sm ${
+            currentLang === l.code
+              ? "bg-black text-white"
+              : "border border-neutral-200 bg-white text-neutral-900"
+          }`}
+        >
+          {l.label}
+        </button>
+      ))}
+    </div>
+  );
+}

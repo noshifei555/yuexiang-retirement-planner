@@ -1,1 +1,18 @@
-{"appName": "Yuexiang Retirement Planner","navHome": "Home","navCalc": "Calculator","navPolicy": "Policy","navAdvice": "Advice","navShop": "Shop","navAbout": "About","modeSenior": "Senior Mode","modePlanner": "Planner Mode","langZh": "中文","langEn": "English","disclaimer": "This is a disclaimer.","heroTitle": "Plan Your Future","heroSubtitle": "Secure Your Retirement Today","btnSenior": "For Seniors","btnPlanner": "For Planners"}
+{
+  "appName": "YueXiang Retirement",
+  "navHome": "Home",
+  "navCalc": "Calculator",
+  "navPolicy": "Policy",
+  "navAdvice": "Advice",
+  "navShop": "Shop",
+  "navAbout": "Compliance",
+  "modeSenior": "Senior Mode",
+  "modePlanner": "Planner Mode",
+  "langZh": "中文",
+  "langEn": "EN",
+  "disclaimer": "Disclaimer: Simulation and education only. Results are for reference. Final rules are subject to local authorities. No selling or promised returns.",
+  "heroTitle": "Plan retirement, starting now",
+  "heroSubtitle": "A clearer view of pension, living cost and gaps.",
+  "btnSenior": "For parents",
+  "btnPlanner": "Plan it myself"
+}

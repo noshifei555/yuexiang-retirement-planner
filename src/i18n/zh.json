@@ -1,1 +1,18 @@
-{\n  \"appName\": \"退休规划助手\",\n  \"navHome\": \"首页\",\n  \"navCalc\": \"计算器\",\n  \"navPolicy\": \"政策\",\n  \"navAdvice\": \"建议\",\n  \"navShop\": \"商店\",\n  \"navAbout\": \"关于我们\",\n  \"modeSenior\": \"资深模式\",\n  \"modePlanner\": \"规划师模式\",\n  \"langZh\": \"中文\",\n  \"langEn\": \"英文\",\n  \"disclaimer\": \"免责声明\",\n  \"heroTitle\": \"欢迎使用退休规划助手\",\n  \"heroSubtitle\": \"让我们帮您规划理想的退休生活\",\n  \"btnSenior\": \"选择资深模式\",\n  \"btnPlanner\": \"选择规划师模式\"\n}
+{
+  "appName": "粤享养老",
+  "navHome": "首页",
+  "navCalc": "测算",
+  "navPolicy": "政策",
+  "navAdvice": "建议",
+  "navShop": "养老品",
+  "navAbout": "合规",
+  "modeSenior": "关怀模式",
+  "modePlanner": "规划模式",
+  "langZh": "中文",
+  "langEn": "EN",
+  "disclaimer": "免责声明：本平台为模拟测算与科普展示，结果仅供参考，最终以当地社保经办机构为准；不代销、不承诺收益。",
+  "heroTitle": "养老规划，从现在开始",
+  "heroSubtitle": "用更清晰的口径，快速看懂养老金、生活成本与缺口。",
+  "btnSenior": "给爸妈看的版本",
+  "btnPlanner": "我来规划一下"
+}
