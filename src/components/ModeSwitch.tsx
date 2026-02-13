@@ -1,7 +1,8 @@
+"use client";
+
 import React from "react";
 
 type Mode = "senior" | "planner";
-
 type Props = {
   currentMode: Mode;
   toggleMode: () => void;
@@ -9,16 +10,27 @@ type Props = {
 
 export default function ModeSwitch({ currentMode, toggleMode }: Props) {
   return (
-    <button
-      onClick={toggleMode}
-      className={`rounded-lg px-3 py-1.5 text-sm ${
-        currentMode === "senior"
-          ? "bg-black text-white"
-          : "border border-neutral-200 bg-white text-neutral-900"
-      }`}
-      aria-label="Toggle mode"
-    >
-      {currentMode === "senior" ? "关怀" : "规划"}
-    </button>
+    <div className="flex items-center rounded-2xl border border-slate-200 bg-white p-1 shadow-sm">
+      <button
+        className={[
+          "px-3 py-2 text-sm font-semibold rounded-xl",
+          currentMode === "senior" ? "bg-blue-600 text-white" : "text-slate-700 hover:bg-slate-100",
+        ].join(" ")}
+        onClick={() => currentMode !== "senior" && toggleMode()}
+        type="button"
+      >
+        关怀
+      </button>
+      <button
+        className={[
+          "px-3 py-2 text-sm font-semibold rounded-xl",
+          currentMode === "planner" ? "bg-blue-600 text-white" : "text-slate-700 hover:bg-slate-100",
+        ].join(" ")}
+        onClick={() => currentMode !== "planner" && toggleMode()}
+        type="button"
+      >
+        规划
+      </button>
+    </div>
   );
 }

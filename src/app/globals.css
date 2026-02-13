@@ -1,44 +1,99 @@
-.senior {
-  font-size: 1.2em;
-  font-weight: 600;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 248 250 252; /* slate-50 */
+  --card: 255 255 255;
+  --text: 15 23 42; /* slate-900 */
+  --muted: 100 116 139; /* slate-500 */
+  --border: 226 232 240; /* slate-200 */
+  --brand: 37 99 235; /* blue-600 */
+  --brand-weak: 219 234 254; /* blue-100 */
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
-  background-color: #F5F5F5;
-  font-family: Arial, sans-serif;
-  color: #333;
+  color: rgb(var(--text));
+  background: rgb(var(--bg));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: rgb(var(--brand));
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.container-app {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  margin: 15px;
+  background: rgb(var(--card));
+  border: 1px solid rgb(var(--border));
+  border-radius: 20px;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.06);
 }
 
-button {
-  background-color: #007AFF;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid rgb(var(--border));
+  background: white;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgb(var(--text));
+}
+
+.btn-primary {
+  border-color: transparent;
+  background: rgb(var(--brand));
   color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 1em;
 }
 
-h1, h2, h3 {
-  margin: 10px 0;
+.btn-primary:hover {
+  filter: brightness(0.98);
 }
 
-h1 {
-  font-size: 2em;
+.btn-ghost {
+  background: transparent;
 }
 
-h2 {
-  font-size: 1.5em;
+.input {
+  width: 100%;
+  border: 1px solid rgb(var(--border));
+  border-radius: 14px;
+  padding: 10px 12px;
+  background: white;
+  outline: none;
 }
 
-h3 {
-  font-size: 1.2em;
+.input:focus {
+  border-color: rgb(var(--brand));
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.kbd {
+  font-size: 12px;
+  color: rgb(var(--muted));
+  border: 1px solid rgb(var(--border));
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: white;
 }
